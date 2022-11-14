@@ -1,0 +1,20 @@
+<h1>More about us! 👪</h1>
+
+<form action="/about" method="get">
+  <input
+  type="text"
+  name="member"
+  placeholder="Search a member!"
+  value="<%= params[:member] %>"
+  >
+  <input type="submit">
+</form>
+
+<h2>Meet our team!</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to "<- Return to Home", root_path %>
